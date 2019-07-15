@@ -32,12 +32,3 @@ body {
 /*
 *  Nav Bar
  */
-nav {
-  position: fixed;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  font-family: 'Bungee',
-    cursive;
-}
