@@ -12,4 +12,15 @@ nav {
   color: #FFFFFF;
   padding: 1.5em;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav>.menu {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#first {
+  font-weight: bold;
 }
