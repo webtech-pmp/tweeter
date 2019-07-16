@@ -1,0 +1,29 @@
+header {
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  background-color: lightblue;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tweeter {
+  margin-top: 1.0em;
+}
+
+.tweeter>div>h2 {
+  font-weight: lighter;
+}
+
+#first {
+  font-weight: bold;
+}
+
+/* centred avatar */
+img {
+  justify-content: center;
+  align-items: center;
+}
