@@ -44,3 +44,89 @@ input {
   font-family: 'Bungee',
     cursive;
 }
+
+.tweet {
+  /* display: flex;
+  flex-direction: row; */
+  border: 3px solid #545149;
+  margin-top: 1.5em;
+}
+
+.tweet>header {
+  background: none;
+  color: #545149;
+  /* background-color: #f4f1ec; */
+  height: auto;
+  margin: 0;
+}
+
+.tweeter-Profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.tweeter-Name {
+  font-weight: lighter;
+  vertical-align: middle;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+
+.tweeter-Handle {
+  color: #C6CBE1;
+  vertical-align: middle;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  visibility: hidden;
+}
+
+.tweet>p {
+  margin: 1em;
+}
+
+.tweet>hr {
+  border: 2px solid #545149;
+  width: 95%;
+}
+
+.tweet>footer {
+  border: 0;
+  /* border-top: 3px solid #545149; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.tweet>.days {
+  font-size: 10pt;
+  margin-left: 5vw;
+}
+
+.tweet>.social-Media {
+  margin-right: 5vw;
+  vertical-align: middle;
+}
+
+.tweet>.social-Media>img {
+  vertical-align: top;
+}
+
+/* on hover  #C6CBE1*/
+.tweet:hover {
+  box-shadow: 10px 10px #C6CBE1;
+}
+
+.tweet>.tweeter-Handle:hover {
+  visibility: visible;
+}
