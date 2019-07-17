@@ -20,11 +20,6 @@ textarea {
   margin-bottom: 0.5em;
 }
 
-/* 
-textarea::-webkit-input-placeholder {
-  color: red;
-} */
-
 .info {
   display: flex;
   flex-direction: row;
@@ -45,22 +40,25 @@ input {
     cursive;
 }
 
+/* Tweet Card */
 .tweet {
-  /* display: flex;
-  flex-direction: row; */
   border: 3px solid #545149;
   margin-top: 1.5em;
+  border-radius: 0.5rem;
+  padding-top: 0.5em;
+  opacity: 0.7;
 }
 
+/* Tweet Header --v */
 .tweet>header {
   background: none;
   color: #545149;
-  /* background-color: #f4f1ec; */
   height: auto;
   margin: 0;
 }
 
 .tweeter-Profile {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -72,7 +70,6 @@ input {
   display: flex;
   flex-direction: row;
 }
-
 
 .tweeter-Name {
   font-weight: lighter;
@@ -87,34 +84,36 @@ input {
   vertical-align: middle;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  visibility: hidden;
+  opacity: 0;
 }
 
+/* Tweet Text */
 .tweet>p {
   margin: 1em;
 }
 
+/* Tweet divider */
 .tweet>hr {
   border: 2px solid #545149;
   width: 95%;
 }
 
+/* Tweet Footer --v */
 .tweet>footer {
   border: 0;
-  /* border-top: 3px solid #545149; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
 }
 
-.tweet>.days {
+.tweet>.when-Made {
   font-size: 10pt;
-  margin-left: 5vw;
+  margin-left: 3vw;
 }
 
 .tweet>.social-Media {
-  margin-right: 5vw;
+  margin-right: 3vw;
   vertical-align: middle;
 }
 
@@ -122,11 +121,12 @@ input {
   vertical-align: top;
 }
 
-/* on hover  #C6CBE1*/
+/* on hover --v */
 .tweet:hover {
   box-shadow: 10px 10px #C6CBE1;
+  opacity: 1;
 }
 
-.tweet>.tweeter-Handle:hover {
-  visibility: visible;
+.tweet:hover .tweeter-Handle {
+  opacity: 1;
 }
