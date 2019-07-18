@@ -50,6 +50,11 @@ $(() => {
 
   };
 
+  $("#create-New-Tweet").submit(function (event) {
+    console.log("Handler for .submit() called.");
+    event.preventDefault();
+  });
+
   // Test / driver code (temporary). Eventually will get this from the server.
   const tweetData = {
     "user": {
