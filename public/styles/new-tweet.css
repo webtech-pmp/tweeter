@@ -121,6 +121,11 @@ input {
   vertical-align: top;
 }
 
+.retweet {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 /* on hover --v */
 .tweet:hover {
   box-shadow: 10px 10px #C6CBE1;
