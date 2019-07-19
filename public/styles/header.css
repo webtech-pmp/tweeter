@@ -38,3 +38,14 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+/* moving arrow CTA */
+#arrow-CTA {
+  margin-top: 0.5rem;
+}
+
+#arrow-CTA:hover {
+  position: relative;
+  top: -10px;
+
+}
