@@ -34,8 +34,14 @@ $(() => {
     const $footer = $('<footer>').addClass('tweet');
     $article.append($footer);
 
-    const $divMade = $('<div>').addClass('when-Made').text(tweetInfo.created_at);
+    // const $divMade = $('<div>').addClass('when-Made').text(tweetInfo.created_at);
+    //  $footer.append($divMade);
+    const $divMade = $('<div>').addClass('when-Made').text(new Date(tweetInfo.created_at));
     $footer.append($divMade);
+    // const $divMade = $('<div>').addClass('when-Made').text(Date.now() - tweetInfo.created_at);
+    // $footer.append($divMade);
+    // const $divMade = $('<div>').addClass('when-Made').text(parseFloat((Date.now() - tweetInfo.created_at) / (60 * 60 * 24 * 1000)).toFixed(1) + ' days ago');
+    // $footer.append($divMade);
     const $divSocialMedia = $('<div>').addClass('social-Media');
     $footer.append($divSocialMedia);
 
@@ -54,11 +60,13 @@ $(() => {
     event.preventDefault();
     let txt = $('#new-Tweet-Text');
     if (txt.val() === '' || txt.val() === 'null') {
-      alert('No tweet entered. Please enter text.')
+      // toggleErrorMsg('No tweet entered. Please enter text.')
+      toggleErrorMsg('show');
     } else if (txt.val().length > 140) {
-      alert('Over 140 characters entered!')
+      // toggleErrorMsg('Over 140 characters entered!')
+      toggleErrorMsg('show');
     } else {
-
+      toggleErrorMsg('hide');
       $.post('/tweets', $(this).serialize(), (data, status) => {
         txt.val('');
         loadTweets();
@@ -85,8 +93,20 @@ $(() => {
   }
   loadTweets();
 
+  // 
   $("#arrow-CTA").click(function () {
     $(".new-tweet").slideToggle("slow");
   });
+
+
+  const toggleErrorMsg = function (toggle) {
+    if (toggle === 'show') {
+      $(".isa_error").slideDown("slow");
+    } else {
+      $(".isa_error").hide();
+    }
+  };
+
+  toggleErrorMsg('hide');
 
 });
