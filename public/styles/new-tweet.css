@@ -18,6 +18,7 @@ textarea {
   vertical-align: middle;
   padding-top: 0.5em;
   margin-bottom: 0.5em;
+
 }
 
 .info {
@@ -130,4 +131,8 @@ input {
 
 .tweet:hover .tweeter-Handle {
   opacity: 1;
+}
+
+p {
+  word-break: break-word;
 }
