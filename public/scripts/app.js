@@ -34,12 +34,6 @@ $(() => {
     const $footer = $('<footer>').addClass('tweet');
     $article.append($footer);
 
-    // const $divMade = $('<div>').addClass('when-Made').text(tweetInfo.created_at);
-    //  $footer.append($divMade);
-    // const $divMade = $('<div>').addClass('when-Made').text(new Date(tweetInfo.created_at));
-    // $footer.append($divMade);
-    // const $divMade = $('<div>').addClass('when-Made').text(Date.now() - tweetInfo.created_at);
-    // $footer.append($divMade);
     const $divMade = $('<div>').addClass('when-Made').text(parseFloat((Date.now() - tweetInfo.created_at) / (60 * 60 * 24 * 1000)).toFixed(1) + ' days ago');
     $footer.append($divMade);
     const $divSocialMedia = $('<div>').addClass('social-Media');
