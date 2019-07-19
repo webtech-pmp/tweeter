@@ -83,5 +83,10 @@ $(() => {
       })
       .then(renderTweets);
   }
-  // loadTweets();
+  loadTweets();
+
+  $("#arrow-CTA").click(function () {
+    $(".new-tweet").slideToggle("slow");
+  });
+
 });
