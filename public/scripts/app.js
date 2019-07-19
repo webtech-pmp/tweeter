@@ -50,26 +50,24 @@ $(() => {
 
   };
 
-  $("#create-New-Tweet").submit(function (event) {
-    event.preventDefault();
-    $.post('/tweets', $(this).serialize(), (data, status) => {})
-    console.log($(this).serialize());
-  });
-
   $('#create-New-Tweet').submit(function (event) {
     event.preventDefault();
     let txt = $('#new-Tweet-Text');
     if (txt.val() === '' || txt.val() === 'null') {
       alert('No tweet entered. Please enter text.')
+    } else if (txt.val().length > 140) {
+      alert('Over 140 characters entered!')
     } else {
-      if (txt.val().length > 140)
-        alert('Over 140 characters entered!')
+
+      $.post('/tweets', $(this).serialize(), (data, status) => {
+        txt.val('');
+        loadTweets();
+      })
+      console.log($(this).serialize());
     }
   });
 
-
   // Test / driver code (temporary). Eventually will get this from the server.
-
 
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
@@ -85,5 +83,5 @@ $(() => {
       })
       .then(renderTweets);
   }
-  loadTweets();
+  // loadTweets();
 });
