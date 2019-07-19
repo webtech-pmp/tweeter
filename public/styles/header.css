@@ -18,8 +18,19 @@ header {
   font-weight: lighter;
 }
 
+.menu {
+  font-family: 'Source Sans Pro',
+    sans-serif;
+}
+
 #first {
   font-weight: bold;
+}
+
+.compose-Btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* centred avatar */
