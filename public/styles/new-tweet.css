@@ -3,7 +3,9 @@
 .isa_error {
   margin: 10px 0px;
   padding: 12px;
-
+  border: 3px solid;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 5px #888;
 }
 
 .isa_error {
@@ -100,7 +102,7 @@ input {
 
 .tweeter-Handle {
   color: #C6CBE1;
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Tweet Text */
