@@ -73,7 +73,7 @@ $(() => {
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
       const $article = createTweetElement(tweet);
-      $('#all-Tweets').append($article);
+      $('#all-Tweets').prepend($article);
     }
   }
 
