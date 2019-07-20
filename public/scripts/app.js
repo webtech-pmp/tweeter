@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// Wrap code with document.Ready()
 $(() => {
   const flagUrl = 'https://img.icons8.com/ios-filled/10/000000/flag.png';
   const retweetUrl = 'https://img.icons8.com/material-two-tone/14/000000/retweet.png';
