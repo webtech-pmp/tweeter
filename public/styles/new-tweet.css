@@ -1,3 +1,4 @@
+/* Input error message --v */
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .isa_error {
@@ -77,6 +78,7 @@ input {
   color: #545149;
   height: auto;
   margin: 0;
+  padding: 0;
 }
 
 .tweeter-Profile {
@@ -110,7 +112,7 @@ input {
   margin: 1em;
 }
 
-/* Tweet divider */
+/* Tweet Divider */
 .tweet>hr {
   border: 2px solid #545149;
   width: 95%;
@@ -152,8 +154,4 @@ input {
 
 .tweet:hover .tweeter-Handle {
   opacity: 1;
-}
-
-p {
-  word-break: break-word;
 }
