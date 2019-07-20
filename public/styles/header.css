@@ -61,5 +61,7 @@ img {
   header {
     margin-left: 2rem;
     margin-top: 150px;
+    height: 400px;
+    padding-top: 0;
   }
 }
