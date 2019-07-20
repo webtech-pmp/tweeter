@@ -24,4 +24,9 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 !["Screenshot of Tablet view with hover state and no tweet error message"](https://github.com/webtech-pmp/tweeter/blob/master/docs/tablet-on-hover-no-text-error.png)
+
+> Figure 1. Screenshot of tablet view with hover state and no tweet entered error message
+
 !["Screenshot of Desktop view and over limit error message"](https://github.com/webtech-pmp/tweeter/blob/master/docs/desktop-over-limit-error.png)
+
+> Figure 2. Screenshot of desktop view and over limit tweet entered error message
