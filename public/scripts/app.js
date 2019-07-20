@@ -56,17 +56,17 @@ $(() => {
     let txt = $('#new-Tweet-Text');
     if (txt.val() === '' || txt.val() === 'null') {
       // toggleErrorMsg('No tweet entered. Please enter text.')
-
+      $('.isa_error span').text('No tweet entered. Please enter text.')
       toggleErrorMsg('show');
     } else if (txt.val().length > 140) {
       // toggleErrorMsg('Over 140 characters entered!')
-
+      $('.isa_error span').text('Over 140 characters entered! Please re-enter text!')
       toggleErrorMsg('show');
     } else {
       toggleErrorMsg('hide');
       $.post('/tweets', $(this).serialize(), (data, status) => {
         txt.val('');
-
+        $("#all-Tweets").empty();
         loadTweets();
       })
       console.log($(this).serialize());
