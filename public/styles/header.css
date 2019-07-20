@@ -1,7 +1,7 @@
 header {
   height: 400px;
   width: 100%;
-  margin-top: 120px;
+  padding-top: 120px;
   background-color: lightblue;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
   color: #FFFFFF;
@@ -18,6 +18,7 @@ header {
 .tweeter>div>h2 {
   font-weight: lighter;
   text-shadow: 3px 3px 3px #000000;
+  margin: 0;
 }
 
 .menu {
@@ -53,7 +54,12 @@ img {
 
 /* Tablet: minimum width of 768px to maximum width of 1023px */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
   /* no change */
+  header {
+    padding-top: 50px;
+  }
+
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
@@ -63,5 +69,7 @@ img {
     margin-top: 150px;
     height: 400px;
     padding-top: 0;
+    width: 25%;
+    border-radius:8px;
   }
 }
