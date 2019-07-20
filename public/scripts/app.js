@@ -67,6 +67,7 @@ $(() => {
       $.post('/tweets', $(this).serialize(), (data, status) => {
         txt.val('');
         $("#all-Tweets").empty();
+        $('.counter').text('140');
         loadTweets();
       })
       console.log($(this).serialize());
