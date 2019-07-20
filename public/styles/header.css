@@ -39,7 +39,7 @@ img {
   align-items: center;
 }
 
-/* moving arrow CTA */
+/* moving arrow CTA --v */
 #arrow-CTA {
   margin-top: 0.5rem;
 }
@@ -47,18 +47,15 @@ img {
 #arrow-CTA:hover {
   position: relative;
   top: -10px;
-
 }
 
-/* Tablet: minimum width of 768px to maximum width of 1024px */
-@media only screen and (min-width: 768px and max-width: 1024px) {
-
+/* Tablet: minimum width of 768px to maximum width of 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* no change */
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
-
   header {
     margin-left: 2rem;
     margin-top: 150px;
