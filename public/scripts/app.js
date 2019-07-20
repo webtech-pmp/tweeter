@@ -46,20 +46,16 @@ $(() => {
     const $imgLikes = $('<img>').attr('src', likesUrl).addClass('likes');
     $divSocialMedia.append($imgLikes);
 
-
-    $("#all-Tweets").append($article);
-
+    return $article;
   };
 
   $('#create-New-Tweet').submit(function (event) {
     event.preventDefault();
     let txt = $('#new-Tweet-Text');
     if (txt.val() === '' || txt.val() === 'null') {
-      // toggleErrorMsg('No tweet entered. Please enter text.')
       $('.isa_error span').text('No tweet entered. Please enter text.')
       toggleErrorMsg('show');
     } else if (txt.val().length > 140) {
-      // toggleErrorMsg('Over 140 characters entered!')
       $('.isa_error span').text('Over 140 characters entered! Please re-enter text!')
       toggleErrorMsg('show');
     } else {
@@ -74,17 +70,12 @@ $(() => {
     }
   });
 
-  // Test / driver code (temporary). Eventually will get this from the server.
-
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
       const $article = createTweetElement(tweet);
-
       $('#all-Tweets').append($article);
-
     }
   }
-  //renderTweets(tweets);
 
   const loadTweets = function () {
     $.ajax('/tweets', {
@@ -99,7 +90,6 @@ $(() => {
     $(".new-tweet").slideToggle("slow");
   });
 
-
   const toggleErrorMsg = function (toggle) {
     if (toggle === 'show') {
       $(".isa_error").slideDown("slow");
@@ -107,7 +97,6 @@ $(() => {
       $(".isa_error").hide();
     }
   };
-
   toggleErrorMsg('hide');
 
 });
