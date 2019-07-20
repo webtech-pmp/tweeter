@@ -15,3 +15,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- md5
+
+###### This version uses flexbox to style the layout
+
+## Final Product
+
+!["Screenshot of Tablet view with hover state and no tweet error message"](https://github.com/webtech-pmp/tweeter/blob/master/docs/tablet-on-hover-no-text-error.png)
+!["Screenshot of Desktop view and over limit error message"](https://github.com/webtech-pmp/tweeter/blob/master/docs/desktop-over-limit-error.png)
