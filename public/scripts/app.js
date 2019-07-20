@@ -34,17 +34,18 @@ $(() => {
     const $footer = $('<footer>').addClass('tweet');
     $article.append($footer);
 
-    const $divMade = $('<div>').addClass('when-Made').text(parseFloat((Date.now() - tweetInfo.created_at) / (60 * 60 * 24 * 1000)).toFixed(1) + ' days ago');
+    const $divMade = $('<div>').addClass('when-Made').text(moment(tweetInfo.created_at).fromNow());
     $footer.append($divMade);
+
     const $divSocialMedia = $('<div>').addClass('social-Media');
     $footer.append($divSocialMedia);
-
     const $imgFlag = $('<img>').attr('src', flagUrl).addClass('flag');
     $divSocialMedia.append($imgFlag);
     const $imgRetweet = $('<img>').attr('src', retweetUrl).addClass('retweet');
     $divSocialMedia.append($imgRetweet);
     const $imgLikes = $('<img>').attr('src', likesUrl).addClass('likes');
     $divSocialMedia.append($imgLikes);
+
 
     $("#all-Tweets").append($article);
 
@@ -55,14 +56,17 @@ $(() => {
     let txt = $('#new-Tweet-Text');
     if (txt.val() === '' || txt.val() === 'null') {
       // toggleErrorMsg('No tweet entered. Please enter text.')
+
       toggleErrorMsg('show');
     } else if (txt.val().length > 140) {
       // toggleErrorMsg('Over 140 characters entered!')
+
       toggleErrorMsg('show');
     } else {
       toggleErrorMsg('hide');
       $.post('/tweets', $(this).serialize(), (data, status) => {
         txt.val('');
+
         loadTweets();
       })
       console.log($(this).serialize());
@@ -74,7 +78,9 @@ $(() => {
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
       const $article = createTweetElement(tweet);
+
       $('#all-Tweets').append($article);
+
     }
   }
   //renderTweets(tweets);
